@@ -1,0 +1,47 @@
+.blitz-score {
+  display: flex;
+  align-items: center;
+  max-width: 230px;
+  margin: 0 auto;
+  gap: calc(var(--space) * 3);
+  padding: var(--space);
+  justify-content: center;
+  margin-bottom: calc(var(--space) * 2);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--space) * 0.5);
+    width: 50%;
+  }
+
+  &__label {
+    font-size: var(--font-xs);
+    text-transform: uppercase;
+    margin-bottom: calc(var(--space) * 0.5);
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  &__value {
+    font-size: var(--font-xl);
+    font-weight: 700;
+    line-height: 1;
+
+    .blitz-score__item--player & {
+      color: var(--color-success);
+    }
+
+    .blitz-score__item--opponent & {
+      color: var(--color-danger);
+    }
+  }
+
+  &__divider {
+    font-size: var(--font-xl);
+    font-weight: 300;
+    color: var(--color-border);
+    margin-top: calc(var(--space) * 2);
+  }
+}

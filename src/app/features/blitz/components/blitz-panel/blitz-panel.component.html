@@ -1,0 +1,25 @@
+<div class="blitz-panel">
+  <div class="blitz-panel__field">
+    <label class="blitz-panel__label" for="interval">Delay (ms)</label>
+    <input
+      class="blitz-panel__input"
+      id="interval"
+      name="interval"
+      type="number"
+      required
+      [min]="1"
+      [(ngModel)]="intervalMs"
+      #intervalInput="ngModel"
+    />
+    @if (intervalInput.invalid) {
+      <span class="blitz-panel__error">
+        @if (intervalInput.errors?.['required']) { Required }
+        @else if (intervalInput.errors?.['min']) { Must be greater than 0 }
+      </span>
+    }
+  </div>
+  <app-button
+    [isDisabled]="gameStatus() === GameStatus.InProgress || !!intervalInput.invalid"
+    (click)="onStart()"
+  >Start</app-button>
+</div>

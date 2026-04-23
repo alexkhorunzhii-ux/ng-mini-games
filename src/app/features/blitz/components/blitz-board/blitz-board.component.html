@@ -1,0 +1,5 @@
+<div class="blitz-board" [style.grid-template-columns]="gridColumns">
+  @for (cell of cells(); track cell.id) {
+    <blitz-cell [cell]="cell" (cellClick)="cellClick.emit(cell.id)" />
+  }
+</div>

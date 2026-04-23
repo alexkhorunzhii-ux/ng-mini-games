@@ -1,0 +1,14 @@
+.blitz-result {
+  text-align: center;
+
+  &__title {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    margin-bottom: calc(var(--space) * 2);
+  }
+
+  &__score {
+    font-size: var(--font-xl);
+    font-weight: 700;
+  }
+}

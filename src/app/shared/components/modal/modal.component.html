@@ -1,0 +1,6 @@
+<dialog #modal class="modal" (click)="onBackdropClick($event)">
+  <button class="modal__close" (click)="close()">✕</button>
+  <div class="modal__content">
+    <ng-content />
+  </div>
+</dialog>

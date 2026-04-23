@@ -1,0 +1,9 @@
+<div class="blitz">
+    <h1 class="blitz__title">Blitz</h1>
+    <div class="blitz__container">
+        <blitz-score [score]="store.score()" />
+        <blitz-board [cells]="store.cells()" (cellClick)="store.clickCell($event)" />
+        <blitz-panel [gameStatus]="store.gameStatus()" (gameStart)="store.start($event)" />
+        <blitz-result [score]="store.score()" (closeResult)="store.reset()" />
+    </div>
+</div>

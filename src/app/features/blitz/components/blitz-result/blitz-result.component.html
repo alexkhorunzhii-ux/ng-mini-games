@@ -1,0 +1,6 @@
+<app-modal (closed)="closeResult.emit()">
+  <div class="blitz-result">
+    <h2 class="blitz-result__title">{{ winner() }}</h2>
+    <div class="blitz-result__score">{{ score().player }} — {{ score().opponent }}</div>
+  </div>
+</app-modal>
